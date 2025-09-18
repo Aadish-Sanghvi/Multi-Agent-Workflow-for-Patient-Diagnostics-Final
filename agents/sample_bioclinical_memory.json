@@ -1,0 +1,493 @@
+{
+  "documents": [
+    "17-year-old male (52 kg, O+) presents with 4 days of URI symptoms (sore throat, rhinorrhea improving) and productive cough; noted scant hemoptysis today (~1 teaspoon total, bright red streaks, no clots), low-grade fever 37.8\u00b0C, mild exertional dyspnea, dull cough-associated non-pleuritic chest pain. No weight loss, night sweats, epistaxis, gum bleeding, easy bruising. Non-smoker, no vaping, no known TB contacts; classmate with cough last week; no recent travel. Medications tried: paracetamol 500 mg x2, OTC dextromethorphan x2. Provisional diagnosis: Acute bronchitis/upper respiratory infection with scant hemoptysis from airway irritation; pneumonia and pulmonary tuberculosis lower-likelihood but to be excluded with imaging and persistence criteria. Differential: acute bronchitis/viral URI; bacterial pneumonia (consider if fever escalates or focal findings); pulmonary tuberculosis (rule out if persistent or abnormal CXR); posterior epistaxis mimicking hemoptysis; less likely bronchiectasis/foreign body/coagulopathy. Recommended investigations: Chest X-ray (PA/LAT) now; CBC with platelets; consider PT/INR/aPTT if bleeding disorder suspected; sputum studies if purulent sputum and fever persist; TB workup (AFB/NAAT, IGRA/TST) if CXR abnormal or symptoms persist. Initial management: Supportive care (hydration, rest, humidified air), cautious antitussive use, avoid NSAIDs; no routine antibiotics unless pneumonia suspected clinically or on CXR. Safety-net: escalate for large-volume hemoptysis, worsening dyspnea, hypoxia, high fever, syncope, chest pain at rest, instability. Follow-up: 48\u201372 hours to review CXR/labs; if hemoptysis persists >1 week or recurs, consider contrast-enhanced chest CT and pulmonology/ENT evaluation.",
+    "28-year-old female presents with 3 weeks of episodic wheeze, chest tightness, and nocturnal cough, worse with exercise and dust exposure; partial relief with friend\u2019s salbutamol inhaler. No fever, chest pain, or hemoptysis. Past history notable for childhood atopy (eczema); non-smoker. Exam between episodes is normal; peak flow variable at home (350\u2013420 L/min). Provisional diagnosis: Asthma (mild persistent). Differential: exercise-induced bronchoconstriction, allergic rhinitis with post-nasal drip, GERD-related cough. Recommended investigations: Spirometry with bronchodilator reversibility; consider FeNO and allergy testing. Initial management: Inhaled low-dose ICS with as-needed SABA; trigger avoidance and spacer technique education; action plan with peak-flow zones. Follow-up: 2\u20134 weeks to assess control and adherence; step-up if persistent symptoms.",
+    "6-month-old male with 2 days of cough, rhinorrhea, poor feeding, and increasing work of breathing; exam shows tachypnea, subcostal retractions, nasal flaring, diffuse crackles and wheeze; SpO2 90% on room air. No prior wheeze episodes. Provisional diagnosis: Acute bronchiolitis (likely RSV). Differential: viral pneumonia, early asthma phenotype (less likely at this age), bacterial pneumonia (if focal consolidation). Recommended investigations: Pulse oximetry; CXR only if severe/atypical; viral testing if needed for cohorting. Initial management: Oxygen to maintain SpO2 \u2265 92%, nasal suctioning, hydration support; avoid routine bronchodilators/steroids unless trial beneficial. Escalation: Worsening hypoxia, apnea, exhaustion, dehydration. Follow-up: Inpatient observation if oxygen requirement persists; otherwise close outpatient follow-up within 24\u201348 hours.",
+    "64-year-old male with 3 months of exertional chest pressure (5\u201310 min, relieved by rest), associated with dyspnea; risk factors include hypertension, type 2 diabetes, and 30-pack-year smoking history (quit 5 years ago). No rest pain or syncope. Exam unremarkable; resting ECG normal. Provisional diagnosis: Stable angina (chronic coronary syndrome). Differential: GERD, musculoskeletal chest pain, anxiety/panic, microvascular angina. Recommended investigations: Stress test (exercise ECG or imaging), lipid panel, A1c; consider coronary CT angiography if intermediate risk. Initial management: Antiplatelet (aspirin unless contraindicated), statin (high-intensity), sublingual nitroglycerin PRN; optimize BP, glycemic control, lifestyle. Red flags: Rest pain >20 min, hemodynamic instability \u2192 urgent evaluation.",
+    "22-year-old female presents with dysuria, urinary frequency, and suprapubic discomfort for 2 days; afebrile; no flank pain, no vaginal discharge. Sexually active; uses condoms inconsistently. Provisional diagnosis: Uncomplicated acute cystitis. Differential: urethritis (STI), vaginitis, early pyelonephritis (if fever/flank pain develop). Recommended investigations: Urinalysis and urine culture (culture optional if classic presentation); consider NAAT for chlamydia/gonorrhea if urethritis suspected. Initial management: Empiric nitrofurantoin 100 mg BID x5 days (if no contraindications) or fosfomycin single dose; phenazopyridine short-term for dysuria. Red flags: Fever, flank pain, vomiting, pregnancy, immunocompromised state \u2192 broaden workup.",
+    "45-year-old male with polyuria, polydipsia, unintentional weight loss over 3 months; random plasma glucose 246 mg/dL and HbA1c 8.6%. No DKA symptoms. BMI 29; family history of diabetes. Provisional diagnosis: Type 2 Diabetes Mellitus. Differential: LADA (consider if lean/autoimmune), medication-induced hyperglycemia, Cushing\u2019s. Recommended investigations: Fasting glucose, repeat A1c, lipid panel, eGFR, urine albumin-to-creatinine, liver enzymes; consider autoantibodies if atypical. Initial management: Metformin (if eGFR adequate), lifestyle modification, SMBG; vaccinate per guidelines; ASCVD risk reduction (statin). Follow-up: 3 months for A1c; earlier if hypoglycemia or intolerance.",
+    "34-year-old female with episodic right upper quadrant pain after fatty meals, radiating to back, associated with nausea; afebrile; Murphy sign equivocal; labs pending. Prior similar episodes x3 months. Provisional diagnosis: Symptomatic cholelithiasis (biliary colic). Differential: acute cholecystitis (if fever/WBC, persistent RUQ tenderness), peptic ulcer disease, pancreatitis, hepatic causes. Recommended investigations: RUQ ultrasound (gallstones, wall thickening, CBD), LFTs, lipase. Initial management: Analgesia, low-fat diet; surgical consult for elective laparoscopic cholecystectomy if symptomatic stones confirmed. Red flags: Fever, jaundice, persistent severe pain \u2192 evaluate for cholecystitis/choledocholithiasis.",
+    "8-year-old male with itchy, erythematous, scaly patches on antecubital fossae and popliteal areas; intermittent flares, worse with heat and soap; family history of atopy. No fever; no purulent drainage. Provisional diagnosis: Atopic dermatitis. Differential: contact dermatitis, psoriasis, tinea corporis (if annular), impetiginization (if crusting). Recommended investigations: Usually clinical; KOH scraping if tinea suspected. Initial management: Regular emollients, topical low-to-medium potency corticosteroids for flares, trigger avoidance (fragrances, harsh soaps), antihistamine at night if pruritus disrupts sleep. Follow-up: Education on steroid use; escalate to calcineurin inhibitors if steroid-sparing needed.",
+    "72-year-old female with acute onset facial droop on the left, slurred speech, and right arm weakness lasting 30 minutes, resolved on arrival; BP 168/92; on antihypertensives inconsistently. Provisional diagnosis: Transient ischemic attack (TIA). Differential: migraine aura, focal seizure, hypoglycemia, Bell\u2019s palsy (if isolated facial involvement). Recommended investigations: Urgent brain imaging (MRI with DWI preferred or CT), vascular imaging (carotid/CTA/MRA), ECG and rhythm monitoring, glucose, lipids. Initial management: Antiplatelet therapy after imaging excludes hemorrhage; BP, statin, and risk factor control; admit/observe based on risk stratification (ABCD2). Red flags: Persistent deficits or hemorrhage signs \u2192 stroke code.",
+    "23-year-old with unilateral left-eye redness and mild itching for 2 days; no discharge, no pain, no photophobia, no vision changes; seasonal allergy history. Provisional diagnosis: Allergic conjunctivitis. Differential: viral conjunctivitis (less likely without watery discharge or preauricular node), bacterial conjunctivitis (unlikely without purulent discharge), dry eye/irritant exposure. Plan: Cold compresses, lubricating drops, oral or topical antihistamine/mast-cell stabilizer; return if pain, photophobia, decreased vision, or discharge develops."
+  ],
+  "doc_metadata": [
+    {
+      "doc_id": 0,
+      "source": "clinic",
+      "condition": "Acute bronchitis with scant hemoptysis (rule out pneumonia/TB)",
+      "age": 17,
+      "sex": "male",
+      "blood_group": "O+",
+      "body_system": "respiratory",
+      "symptom_tags": [
+        "productive_cough",
+        "hemoptysis",
+        "low_grade_fever",
+        "exertional_dyspnea",
+        "non_pleuritic_chest_pain",
+        "sore_throat",
+        "rhinorrhea"
+      ],
+      "negatives": [
+        "night_sweats",
+        "weight_loss",
+        "epistaxis",
+        "gum_bleeding",
+        "easy_bruising",
+        "large_volume_hemoptysis"
+      ],
+      "risk_factors": [
+        "school_contact_with_cough"
+      ],
+      "timeline_days": 4,
+      "recommended_tests": [
+        "chest_xray",
+        "cbc",
+        "coagulation_studies_if_indicated",
+        "sputum_culture_if_persistent",
+        "tb_workup_if_indicated"
+      ],
+      "setting": "outpatient_if_safe"
+    },
+    {
+      "doc_id": 1,
+      "source": "clinic",
+      "condition": "Asthma (mild persistent)",
+      "age": 28,
+      "sex": "female",
+      "body_system": "respiratory",
+      "symptom_tags": [
+        "wheeze",
+        "nocturnal_cough",
+        "chest_tightness",
+        "exercise_trigger",
+        "dust_trigger",
+        "partial_saba_response"
+      ],
+      "negatives": [
+        "fever",
+        "rest_chest_pain",
+        "hemoptysis"
+      ],
+      "risk_factors": [
+        "atopy_history",
+        "dust_exposure"
+      ],
+      "recommended_tests": [
+        "spirometry_bronchodilator",
+        "feno_optional",
+        "allergy_testing_optional"
+      ],
+      "setting": "outpatient"
+    },
+    {
+      "doc_id": 2,
+      "source": "emergency",
+      "condition": "Acute bronchiolitis",
+      "age": 0.5,
+      "sex": "male",
+      "body_system": "respiratory",
+      "symptom_tags": [
+        "tachypnea",
+        "wheeze",
+        "rhinorrhea",
+        "poor_feeding",
+        "increased_work_of_breathing",
+        "hypoxemia"
+      ],
+      "vitals": {
+        "spo2": 90
+      },
+      "recommended_tests": [
+        "pulse_oximetry",
+        "cxr_if_atypical",
+        "viral_panel_if_needed"
+      ],
+      "setting": "emergency"
+    },
+    {
+      "doc_id": 3,
+      "source": "cardiology",
+      "condition": "Stable angina",
+      "age": 64,
+      "sex": "male",
+      "body_system": "cardiology",
+      "symptom_tags": [
+        "exertional_chest_pressure",
+        "dyspnea_on_exertion",
+        "relief_with_rest",
+        "nitro_prn"
+      ],
+      "risk_factors": [
+        "hypertension",
+        "type2_diabetes",
+        "smoking_history"
+      ],
+      "recommended_tests": [
+        "stress_testing",
+        "lipid_panel",
+        "a1c",
+        "coronary_cta_optional"
+      ],
+      "setting": "outpatient"
+    },
+    {
+      "doc_id": 4,
+      "source": "primary_care",
+      "condition": "Acute cystitis",
+      "age": 22,
+      "sex": "female",
+      "body_system": "genitourinary",
+      "symptom_tags": [
+        "dysuria",
+        "frequency",
+        "suprapubic_pain",
+        "afebrile",
+        "no_flank_pain",
+        "no_vaginal_discharge"
+      ],
+      "risk_factors": [
+        "sexually_active"
+      ],
+      "recommended_tests": [
+        "urinalysis",
+        "urine_culture_optional",
+        "sti_naat_if_indicated"
+      ],
+      "setting": "outpatient"
+    },
+    {
+      "doc_id": 5,
+      "source": "clinic",
+      "condition": "Type 2 Diabetes Mellitus",
+      "age": 45,
+      "sex": "male",
+      "body_system": "endocrine",
+      "symptom_tags": [
+        "polyuria",
+        "polydipsia",
+        "weight_loss",
+        "hyperglycemia",
+        "elevated_hba1c"
+      ],
+      "labs": {
+        "random_glucose_mg_dl": 246,
+        "hba1c_percent": 8.6
+      },
+      "risk_factors": [
+        "overweight",
+        "family_history_diabetes"
+      ],
+      "recommended_tests": [
+        "fasting_glucose",
+        "a1c_repeat",
+        "lipid_panel",
+        "egfr",
+        "uacr",
+        "lfts"
+      ],
+      "setting": "outpatient"
+    },
+    {
+      "doc_id": 6,
+      "source": "gastroenterology",
+      "condition": "Symptomatic cholelithiasis",
+      "age": 34,
+      "sex": "female",
+      "body_system": "gastroenterology",
+      "symptom_tags": [
+        "ruq_pain_postprandial",
+        "biliary_colic",
+        "nausea",
+        "radiation_to_back",
+        "fatty_meal_trigger"
+      ],
+      "recommended_tests": [
+        "ruq_ultrasound",
+        "lfts",
+        "lipase"
+      ],
+      "setting": "outpatient"
+    },
+    {
+      "doc_id": 7,
+      "source": "dermatology",
+      "condition": "Atopic dermatitis",
+      "age": 8,
+      "sex": "male",
+      "body_system": "dermatology",
+      "symptom_tags": [
+        "pruritus",
+        "erythematous_scaly_patches",
+        "flexural_distribution",
+        "flares",
+        "soap_irritant",
+        "heat_worse"
+      ],
+      "risk_factors": [
+        "atopy_family_history"
+      ],
+      "recommended_tests": [
+        "koh_if_indicated"
+      ],
+      "setting": "outpatient"
+    },
+    {
+      "doc_id": 8,
+      "source": "neurology",
+      "condition": "Transient ischemic attack",
+      "age": 72,
+      "sex": "female",
+      "body_system": "neurology",
+      "symptom_tags": [
+        "transient_focal_neurologic_deficit",
+        "facial_droop",
+        "dysarthria",
+        "arm_weakness",
+        "resolved_symptoms"
+      ],
+      "risk_factors": [
+        "hypertension",
+        "poor_med_adherence"
+      ],
+      "recommended_tests": [
+        "brain_mri_or_ct",
+        "vascular_imaging",
+        "ecg_monitoring",
+        "glucose",
+        "lipid_panel"
+      ],
+      "setting": "emergency"
+    },
+    {
+      "doc_id": 9,
+      "source": "primary_care",
+      "condition": "Allergic conjunctivitis",
+      "age": 23,
+      "sex": "unknown",
+      "body_system": "ophthalmology",
+      "symptom_tags": [
+        "itching",
+        "red_eye",
+        "unilateral",
+        "no_discharge",
+        "no_pain",
+        "no_vision_change",
+        "allergic_history"
+      ],
+      "setting": "outpatient"
+    }
+  ],
+  "chunks": [
+    "17-year-old male (52 kg, O+) presents with 4 days of URI symptoms (sore throat, rhinorrhea improving) and productive cough; noted scant hemoptysis today (~1 teaspoon total, bright red streaks, no clots), low-grade fever 37.8\u00b0C, mild exertional dyspnea, dull cough-associated non-pleuritic chest pain. No weight loss, night sweats, epistaxis, gum bleeding, easy bruising. Non-smoker, no vaping, no known TB contacts; classmate with cough last week; no recent travel. Medications tried: paracetamol 500 mg x2, OTC dextromethorphan x2. Provisional diagnosis: Acute bronchitis/upper respiratory infection with scant hemoptysis from airway irritation; pneumonia and pulmonary tuberculosis lower-likelihood but to be excluded with imaging and persistence criteria. Differential: acute bronchitis/viral URI; bacterial pneumonia (consider if fever escalates or focal findings); pulmonary tuberculosis (rule out if persistent or abnormal CXR); posterior epistaxis mimicking hemoptysis; less likely bronchiectasis/foreign body/coagulopathy. Recommended investigations: Chest X-ray (PA/LAT) now; CBC with platelets; consider PT/INR/aPTT if bleeding disorder suspected; sputum studies if purulent sputum and fever persist; TB workup (AFB/NAAT, IGRA/TST) if CXR abnormal or symptoms persist. Initial management: Supportive care (hydration, rest, humidified air), cautious antitussive use, avoid NSAIDs; no routine antibiotics unless pneumonia suspected clinically or on CXR. Safety-net: escalate for large-volume hemoptysis, worsening dyspnea, hypoxia, high fever, syncope, chest pain at rest, instability. Follow-up: 48\u201372 hours to review CXR/labs; if hemoptysis persists >1 week or recurs, consider contrast-enhanced chest CT and pulmonology/ENT evaluation.",
+    "28-year-old female presents with 3 weeks of episodic wheeze, chest tightness, and nocturnal cough, worse with exercise and dust exposure; partial relief with friend\u2019s salbutamol inhaler. No fever, chest pain, or hemoptysis. Past history notable for childhood atopy (eczema); non-smoker. Exam between episodes is normal; peak flow variable at home (350\u2013420 L/min). Provisional diagnosis: Asthma (mild persistent). Differential: exercise-induced bronchoconstriction, allergic rhinitis with post-nasal drip, GERD-related cough. Recommended investigations: Spirometry with bronchodilator reversibility; consider FeNO and allergy testing. Initial management: Inhaled low-dose ICS with as-needed SABA; trigger avoidance and spacer technique education; action plan with peak-flow zones. Follow-up: 2\u20134 weeks to assess control and adherence; step-up if persistent symptoms.",
+    "6-month-old male with 2 days of cough, rhinorrhea, poor feeding, and increasing work of breathing; exam shows tachypnea, subcostal retractions, nasal flaring, diffuse crackles and wheeze; SpO2 90% on room air. No prior wheeze episodes. Provisional diagnosis: Acute bronchiolitis (likely RSV). Differential: viral pneumonia, early asthma phenotype (less likely at this age), bacterial pneumonia (if focal consolidation). Recommended investigations: Pulse oximetry; CXR only if severe/atypical; viral testing if needed for cohorting. Initial management: Oxygen to maintain SpO2 \u2265 92%, nasal suctioning, hydration support; avoid routine bronchodilators/steroids unless trial beneficial. Escalation: Worsening hypoxia, apnea, exhaustion, dehydration. Follow-up: Inpatient observation if oxygen requirement persists; otherwise close outpatient follow-up within 24\u201348 hours.",
+    "64-year-old male with 3 months of exertional chest pressure (5\u201310 min, relieved by rest), associated with dyspnea; risk factors include hypertension, type 2 diabetes, and 30-pack-year smoking history (quit 5 years ago). No rest pain or syncope. Exam unremarkable; resting ECG normal. Provisional diagnosis: Stable angina (chronic coronary syndrome). Differential: GERD, musculoskeletal chest pain, anxiety/panic, microvascular angina. Recommended investigations: Stress test (exercise ECG or imaging), lipid panel, A1c; consider coronary CT angiography if intermediate risk. Initial management: Antiplatelet (aspirin unless contraindicated), statin (high-intensity), sublingual nitroglycerin PRN; optimize BP, glycemic control, lifestyle. Red flags: Rest pain >20 min, hemodynamic instability \u2192 urgent evaluation.",
+    "22-year-old female presents with dysuria, urinary frequency, and suprapubic discomfort for 2 days; afebrile; no flank pain, no vaginal discharge. Sexually active; uses condoms inconsistently. Provisional diagnosis: Uncomplicated acute cystitis. Differential: urethritis (STI), vaginitis, early pyelonephritis (if fever/flank pain develop). Recommended investigations: Urinalysis and urine culture (culture optional if classic presentation); consider NAAT for chlamydia/gonorrhea if urethritis suspected. Initial management: Empiric nitrofurantoin 100 mg BID x5 days (if no contraindications) or fosfomycin single dose; phenazopyridine short-term for dysuria. Red flags: Fever, flank pain, vomiting, pregnancy, immunocompromised state \u2192 broaden workup.",
+    "45-year-old male with polyuria, polydipsia, unintentional weight loss over 3 months; random plasma glucose 246 mg/dL and HbA1c 8.6%. No DKA symptoms. BMI 29; family history of diabetes. Provisional diagnosis: Type 2 Diabetes Mellitus. Differential: LADA (consider if lean/autoimmune), medication-induced hyperglycemia, Cushing\u2019s. Recommended investigations: Fasting glucose, repeat A1c, lipid panel, eGFR, urine albumin-to-creatinine, liver enzymes; consider autoantibodies if atypical. Initial management: Metformin (if eGFR adequate), lifestyle modification, SMBG; vaccinate per guidelines; ASCVD risk reduction (statin). Follow-up: 3 months for A1c; earlier if hypoglycemia or intolerance.",
+    "34-year-old female with episodic right upper quadrant pain after fatty meals, radiating to back, associated with nausea; afebrile; Murphy sign equivocal; labs pending. Prior similar episodes x3 months. Provisional diagnosis: Symptomatic cholelithiasis (biliary colic). Differential: acute cholecystitis (if fever/WBC, persistent RUQ tenderness), peptic ulcer disease, pancreatitis, hepatic causes. Recommended investigations: RUQ ultrasound (gallstones, wall thickening, CBD), LFTs, lipase. Initial management: Analgesia, low-fat diet; surgical consult for elective laparoscopic cholecystectomy if symptomatic stones confirmed. Red flags: Fever, jaundice, persistent severe pain \u2192 evaluate for cholecystitis/choledocholithiasis.",
+    "8-year-old male with itchy, erythematous, scaly patches on antecubital fossae and popliteal areas; intermittent flares, worse with heat and soap; family history of atopy. No fever; no purulent drainage. Provisional diagnosis: Atopic dermatitis. Differential: contact dermatitis, psoriasis, tinea corporis (if annular), impetiginization (if crusting). Recommended investigations: Usually clinical; KOH scraping if tinea suspected. Initial management: Regular emollients, topical low-to-medium potency corticosteroids for flares, trigger avoidance (fragrances, harsh soaps), antihistamine at night if pruritus disrupts sleep. Follow-up: Education on steroid use; escalate to calcineurin inhibitors if steroid-sparing needed.",
+    "72-year-old female with acute onset facial droop on the left, slurred speech, and right arm weakness lasting 30 minutes, resolved on arrival; BP 168/92; on antihypertensives inconsistently. Provisional diagnosis: Transient ischemic attack (TIA). Differential: migraine aura, focal seizure, hypoglycemia, Bell\u2019s palsy (if isolated facial involvement). Recommended investigations: Urgent brain imaging (MRI with DWI preferred or CT), vascular imaging (carotid/CTA/MRA), ECG and rhythm monitoring, glucose, lipids. Initial management: Antiplatelet therapy after imaging excludes hemorrhage; BP, statin, and risk factor control; admit/observe based on risk stratification (ABCD2). Red flags: Persistent deficits or hemorrhage signs \u2192 stroke code.",
+    "23-year-old with unilateral left-eye redness and mild itching for 2 days; no discharge, no pain, no photophobia, no vision changes; seasonal allergy history. Provisional diagnosis: Allergic conjunctivitis. Differential: viral conjunctivitis (less likely without watery discharge or preauricular node), bacterial conjunctivitis (unlikely without purulent discharge), dry eye/irritant exposure. Plan: Cold compresses, lubricating drops, oral or topical antihistamine/mast-cell stabilizer; return if pain, photophobia, decreased vision, or discharge develops."
+  ],
+  "chunk_metadata": [
+    {
+      "doc_id": 0,
+      "chunk_id": 0,
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "source": "clinic",
+      "condition": "Acute bronchitis with scant hemoptysis (rule out pneumonia/TB)",
+      "body_system": "respiratory",
+      "symptom_tags": [
+        "productive_cough",
+        "hemoptysis",
+        "low_grade_fever",
+        "exertional_dyspnea",
+        "non_pleuritic_chest_pain",
+        "sore_throat",
+        "rhinorrhea"
+      ],
+      "word_count": 224
+    },
+    {
+      "doc_id": 1,
+      "chunk_id": 1,
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "source": "clinic",
+      "condition": "Asthma (mild persistent)",
+      "body_system": "respiratory",
+      "symptom_tags": [
+        "wheeze",
+        "nocturnal_cough",
+        "chest_tightness",
+        "exercise_trigger",
+        "dust_trigger",
+        "partial_saba_response"
+      ],
+      "word_count": 109
+    },
+    {
+      "doc_id": 2,
+      "chunk_id": 2,
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "source": "emergency",
+      "condition": "Acute bronchiolitis",
+      "body_system": "respiratory",
+      "symptom_tags": [
+        "tachypnea",
+        "wheeze",
+        "rhinorrhea",
+        "poor_feeding",
+        "increased_work_of_breathing",
+        "hypoxemia"
+      ],
+      "word_count": 109
+    },
+    {
+      "doc_id": 3,
+      "chunk_id": 3,
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "source": "cardiology",
+      "condition": "Stable angina",
+      "body_system": "cardiology",
+      "symptom_tags": [
+        "exertional_chest_pressure",
+        "dyspnea_on_exertion",
+        "relief_with_rest",
+        "nitro_prn"
+      ],
+      "word_count": 102
+    },
+    {
+      "doc_id": 4,
+      "chunk_id": 4,
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "source": "primary_care",
+      "condition": "Acute cystitis",
+      "body_system": "genitourinary",
+      "symptom_tags": [
+        "dysuria",
+        "frequency",
+        "suprapubic_pain",
+        "afebrile",
+        "no_flank_pain",
+        "no_vaginal_discharge"
+      ],
+      "word_count": 90
+    },
+    {
+      "doc_id": 5,
+      "chunk_id": 5,
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "source": "clinic",
+      "condition": "Type 2 Diabetes Mellitus",
+      "body_system": "endocrine",
+      "symptom_tags": [
+        "polyuria",
+        "polydipsia",
+        "weight_loss",
+        "hyperglycemia",
+        "elevated_hba1c"
+      ],
+      "word_count": 85
+    },
+    {
+      "doc_id": 6,
+      "chunk_id": 6,
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "source": "gastroenterology",
+      "condition": "Symptomatic cholelithiasis",
+      "body_system": "gastroenterology",
+      "symptom_tags": [
+        "ruq_pain_postprandial",
+        "biliary_colic",
+        "nausea",
+        "radiation_to_back",
+        "fatty_meal_trigger"
+      ],
+      "word_count": 84
+    },
+    {
+      "doc_id": 7,
+      "chunk_id": 7,
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "source": "dermatology",
+      "condition": "Atopic dermatitis",
+      "body_system": "dermatology",
+      "symptom_tags": [
+        "pruritus",
+        "erythematous_scaly_patches",
+        "flexural_distribution",
+        "flares",
+        "soap_irritant",
+        "heat_worse"
+      ],
+      "word_count": 87
+    },
+    {
+      "doc_id": 8,
+      "chunk_id": 8,
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "source": "neurology",
+      "condition": "Transient ischemic attack",
+      "body_system": "neurology",
+      "symptom_tags": [
+        "transient_focal_neurologic_deficit",
+        "facial_droop",
+        "dysarthria",
+        "arm_weakness",
+        "resolved_symptoms"
+      ],
+      "word_count": 95
+    },
+    {
+      "doc_id": 9,
+      "chunk_id": 9,
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "source": "primary_care",
+      "condition": "Allergic conjunctivitis",
+      "body_system": "ophthalmology",
+      "symptom_tags": [
+        "itching",
+        "red_eye",
+        "unilateral",
+        "no_discharge",
+        "no_pain",
+        "no_vision_change",
+        "allergic_history"
+      ],
+      "word_count": 66
+    }
+  ],
+  "faiss_chunk_id_map": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "config": {
+    "model_name": "emilyalsentzer/Bio_ClinicalBERT",
+    "chunk_size": 300,
+    "overlap": 50,
+    "embedding_dim": 768,
+    "use_transformers": true
+  },
+  "saved_timestamp": "2025-09-17T21:00:42.483862"
+}
