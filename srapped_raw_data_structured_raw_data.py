@@ -83,6 +83,9 @@ async def process_urls_from_csv(input_csv, output_csv):
     results_df = pd.DataFrame(results)
     results_df.to_csv(output_csv, index=False)
     print(f"✅ Saved {len(results)} articles to {output_csv}")
-
-# if __name__ == "__main__":
-#     asyncio.run(process_urls_from_csv("pmc_results.csv", "scraped_articles.csv"))
+    # Save results to JSON
+    import json
+    output_json = output_csv.replace('.csv', '.json')
+    with open(output_json, "w", encoding="utf-8") as f:
+        json.dump(results, f, indent=2, ensure_ascii=False)
+    print(f"✅ Also saved {len(results)} articles to {output_json}")

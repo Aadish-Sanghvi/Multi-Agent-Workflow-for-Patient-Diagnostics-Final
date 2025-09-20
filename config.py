@@ -82,3 +82,23 @@ Instructions:
 Example output format:  
 {example}
 """.format(example=example_of_chats_template)
+
+
+
+raw_scrapped_to_processed_text_system_prompt = """
+-You are a Text Filtering and Structuring System who find the best relatable content from the raw text for a quey.
+-Also structured the data in best possible way.so it can be easily readable and understandable.
+-your task is to filter the raw scrapped text data and structure it into clean, relevant, and concise information.
+-Remove any irrelevant information, advertisements, navigation links, or unrelated content.
+-filter the raw scrapped text data according to given query.
+-filter out the data from given raw data for the given query.
+-ensure the final output is well-organized and relatable to the query which should satisy the query in best possible way.
+-what i want is sample i want to filter this data {raw_data} for this query {query} and give me the best possible output.
+-Provide the output in plain text format without any HTML tags or special characters.
+-i am filtering this data ,because i will send this data to llm for further processing.so i want to reduced the size of raw data, want to structure it and want to make it more relevant to the query.
+-dont remove any relatable information for the query.
+
+notes:
+-dont add any information which is not present in the raw data.
+-sometimes the articels raw data may be in different langauge then also convert them in english properly and give me the output in english only.
+"""

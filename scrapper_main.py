@@ -1,34 +1,30 @@
-#normal scraping without llm filtering
+from fastapi import FastAPI
+from pydantic import BaseModel
+from typing import List
 import asyncio
-from typing import List, Dict
 from crawl4ai import AsyncWebCrawler
-from langchain.text_splitter import RecursiveCharacterTextSplitter
 from srapped_raw_data_structured_raw_data import *
-import re
+from filter_raw_scrapped_data_using_gemini import *
 import pandas as pd
+import re
+import json
+import os
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
-# Read your raw file
+app = FastAPI()
 
+class ScrapeRequest(BaseModel):
+    keywords: List[str]
+    filtering_prompt: str
 
 class WebScrapingAgent:
     def __init__(self, chunk_size: int = 1000, chunk_overlap: int = 200):
+        from langchain.text_splitter import RecursiveCharacterTextSplitter
         self.text_splitter = RecursiveCharacterTextSplitter(
             chunk_size=chunk_size, chunk_overlap=chunk_overlap
         )
 
-    @staticmethod
-    def structure_to_rawdata(all_raw_contents: list, output_csv: str = "pmc_results.csv"):
-        # Combine all raw contents
-        combined_raw = "\n".join(all_raw_contents)
-        # Regex to match PMC IDs like PMC12345678
-        pmc_ids = re.findall(r'PMC\d+', combined_raw)
-        pmc_ids = list(set(pmc_ids))
-        data = [{"pmcid": pmc, "url": f"https://pmc.ncbi.nlm.nih.gov/articles/{pmc}/"} for pmc in pmc_ids]
-        df = pd.DataFrame(data)
-        df.to_csv(output_csv, index=False)
-        print(f"✅ Extracted {len(pmc_ids)} PMC IDs. Saved to {output_csv}")
-
-    async def scrape_page(self, url: str) -> Dict:
+    async def scrape_page(self, url: str):
         print(f"Scraping: {url}")
         async with AsyncWebCrawler(verbose=True) as crawler:
             crawler.browser_config = {
@@ -62,25 +58,48 @@ class WebScrapingAgent:
                     "success": False,
                     "error": result.error_message
                 }
-    
-    def run(self, url: str) -> Dict:
-        return asyncio.run(self.scrape_page(url))
 
-# Example Usage: Loop through pages 1-10
-async def main():
+    async def scraping_articles(self, all_raw_contents: list, output_csv: str = "pmc_results.csv", output_json: str = "pmc_results.json", parallel_requests: int = 10):
+        combined_raw = "\n".join(all_raw_contents)
+        pmc_ids = re.findall(r'PMC\d+', combined_raw)
+        pmc_ids = list(set(pmc_ids))
+        data = []
+
+        article_urls = [f"https://pmc.ncbi.nlm.nih.gov/articles/{pmc}/" for pmc in pmc_ids]
+
+        # Process in batches of 'parallel_requests' (now always 10)
+        for i in range(0, len(article_urls), parallel_requests):
+            batch_urls = article_urls[i:i+parallel_requests]
+            results = await asyncio.gather(*(self.scrape_page(url) for url in batch_urls))
+            for result in results:
+                pmc = re.search(r'PMC\d+', result["url"]).group(0) if result["success"] else None
+                title = result["title"] if result["success"] else "Unknown Title"
+                content = result["raw_content"] if result["success"] else None
+                data.append({"pmcid": pmc, "url": result["url"], "title": title, "content": content})
+
+        df = pd.DataFrame([{"pmcid": d["pmcid"], "url": d["url"]} for d in data if d["pmcid"]])
+        df.to_csv(output_csv, index=False)
+        with open(output_json, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+
+
+@app.post("/scrape_and_filter")
+async def scrape_and_filter(request: ScrapeRequest):
     agent = WebScrapingAgent()
-    base_url = "https://pmc.ncbi.nlm.nih.gov/search/?term=chronic+cough&sort=relevance&page={page}&ac=no"
+    keywords = request.keywords
+    filtering_prompt = request.filtering_prompt
     all_raw_contents = []
-    for page_number in range(1, 3):  # Pages 1 to 10
-        url = base_url.format(page=page_number)
+
+    # Build a single search term by joining keywords with '+'
+    search_term = "+".join(keywords)
+    for page_number in range(1, 2):  # You can change range for more pages
+        url = f"https://pmc.ncbi.nlm.nih.gov/search/?term={search_term}&sort=relevance&page={page_number}&ac=no"
         result = await agent.scrape_page(url)
-        print(f"\n--- Page {page_number} ---")
-        print(result["raw_content"])
-        raw_content = result["raw_content"]
-        all_raw_contents.append(raw_content)
-    agent.structure_to_rawdata(all_raw_contents)
+        if result["success"]:
+            all_raw_contents.append(result["raw_content"])
+
+    # Always scrape 10 articles in parallel
+    await agent.scraping_articles(all_raw_contents, parallel_requests=10)
     await process_urls_from_csv("pmc_results.csv", "scraped_articles.csv")
-
-if __name__ == "__main__":
-    asyncio.run(main())
-
+    result = filter_scraped_data("./vector_db_storage", "scraped_articles.json", filtering_prompt, "pmc_results.csv")
+    return result
