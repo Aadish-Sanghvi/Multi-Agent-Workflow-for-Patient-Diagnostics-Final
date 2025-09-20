@@ -28,3 +28,20 @@ curl --location 'http://127.0.0.1:8000/scrape_and_filter' \
     "keywords": ["chronic", "cough", "deseases"], 
     "filtering_prompt": "what is chronic cough? what are the symptoms of it? how to cure it"
 } '
+
+
+
+
+
+{
+"conversation": "Patient: I’ve had fever and dry cough for 3 days, worse at night. Doctor: Any shortness of breath? Patient: Mild on exertion.",
+"patient_info": {
+"temperature": 38.3,
+"heart_rate": 96,
+"blood_pressure": "128/78",
+"oxygen_saturation": 96
+},
+"doctor_opinion": "Likely viral URI; supportive care. Consider influenza depending on exposure.",
+"abha_id": "ABHA-56-9812-4432",
+"image": null
+}
