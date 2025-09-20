@@ -33,15 +33,186 @@ curl --location 'http://127.0.0.1:8000/scrape_and_filter' \
 
 
 
-{
-"conversation": "Patient: I’ve had fever and dry cough for 3 days, worse at night. Doctor: Any shortness of breath? Patient: Mild on exertion.",
-"patient_info": {
-"temperature": 38.3,
-"heart_rate": 96,
-"blood_pressure": "128/78",
-"oxygen_saturation": 96
-},
-"doctor_opinion": "Likely viral URI; supportive care. Consider influenza depending on exposure.",
-"abha_id": "ABHA-56-9812-4432",
-"image": null
-}
+[
+  {
+    "conversation": "Patient: I have burning urination and lower abdominal pain for 2 days. Doctor: Any fever or blood in urine? Patient: Yes, mild fever and sometimes blood.",
+    "patient_info": {
+      "temperature": 38.0,
+      "heart_rate": 92,
+      "blood_pressure": "122/80",
+      "oxygen_saturation": 98
+    },
+    "doctor_opinion": "Suggestive of urinary tract infection; start antibiotics and increase fluids.",
+    "abha_id": "ABHA-43-8821-1111",
+    "image": null
+  },
+  {
+    "conversation": "Patient: I feel chest tightness and shortness of breath on walking. Doctor: Do you have any chest pain? Patient: Yes, sometimes radiating to the left arm.",
+    "patient_info": {
+      "temperature": 37.0,
+      "heart_rate": 110,
+      "blood_pressure": "150/95",
+      "oxygen_saturation": 93
+    },
+    "doctor_opinion": "Possible angina; recommend ECG, troponin, and cardiology referral.",
+    "abha_id": "ABHA-21-7623-9843",
+    "image": null
+  },
+  {
+    "conversation": "Patient: My joints hurt, especially in the morning. Doctor: Which joints? Patient: Fingers and knees, stiffness improves after movement.",
+    "patient_info": {
+      "temperature": 36.8,
+      "heart_rate": 82,
+      "blood_pressure": "118/76",
+      "oxygen_saturation": 99
+    },
+    "doctor_opinion": "Rheumatoid arthritis likely; order RF, anti-CCP, and refer to rheumatology.",
+    "abha_id": "ABHA-87-6543-9821",
+    "image": null
+  },
+  {
+    "conversation": "Patient: I’ve had watery stools 6 times since morning. Doctor: Any vomiting or abdominal cramps? Patient: Yes, both since last night.",
+    "patient_info": {
+      "temperature": 37.9,
+      "heart_rate": 102,
+      "blood_pressure": "110/70",
+      "oxygen_saturation": 97
+    },
+    "doctor_opinion": "Acute gastroenteritis; oral rehydration and monitor electrolytes.",
+    "abha_id": "ABHA-34-1122-9933",
+    "image": null
+  },
+  {
+    "conversation": "Patient: I feel very thirsty and urinate frequently. Doctor: Any weight loss? Patient: Yes, about 4 kg in a month.",
+    "patient_info": {
+      "temperature": 36.9,
+      "heart_rate": 88,
+      "blood_pressure": "125/82",
+      "oxygen_saturation": 98
+    },
+    "doctor_opinion": "Suggestive of new-onset diabetes; check fasting glucose and HbA1c.",
+    "abha_id": "ABHA-56-9090-2211",
+    "image": null
+  },
+  {
+    "conversation": "Patient: I feel a lump in my neck that’s been growing. Doctor: Any pain or difficulty swallowing? Patient: No pain, but some trouble swallowing.",
+    "patient_info": {
+      "temperature": 37.1,
+      "heart_rate": 84,
+      "blood_pressure": "118/75",
+      "oxygen_saturation": 99
+    },
+    "doctor_opinion": "Suspicious thyroid nodule; recommend ultrasound and FNAC.",
+    "abha_id": "ABHA-78-2211-5432",
+    "image": null
+  },
+  {
+    "conversation": "Patient: I’ve had wheezing and breathlessness for 2 days. Doctor: Do you have any history of asthma? Patient: Yes, since childhood.",
+    "patient_info": {
+      "temperature": 37.2,
+      "heart_rate": 100,
+      "blood_pressure": "120/80",
+      "oxygen_saturation": 92
+    },
+    "doctor_opinion": "Asthma exacerbation; start inhaled bronchodilators and steroids.",
+    "abha_id": "ABHA-91-7765-3322",
+    "image": null
+  },
+  {
+    "conversation": "Patient: I’ve had persistent headache and blurred vision. Doctor: Do you have nausea or vomiting? Patient: Yes, in the mornings.",
+    "patient_info": {
+      "temperature": 37.0,
+      "heart_rate": 76,
+      "blood_pressure": "160/100",
+      "oxygen_saturation": 98
+    },
+    "doctor_opinion": "Likely uncontrolled hypertension with raised ICP; urgent imaging advised.",
+    "abha_id": "ABHA-32-7777-9900",
+    "image": null
+  },
+  {
+    "conversation": "Patient: I feel tingling in my feet and unsteady while walking. Doctor: How long has this been? Patient: For 3 months.",
+    "patient_info": {
+      "temperature": 36.8,
+      "heart_rate": 78,
+      "blood_pressure": "124/78",
+      "oxygen_saturation": 98
+    },
+    "doctor_opinion": "Peripheral neuropathy likely; test for diabetes and vitamin B12 deficiency.",
+    "abha_id": "ABHA-12-3333-4444",
+    "image": null
+  },
+  {
+    "conversation": "Patient: I have yellowing of eyes and dark urine. Doctor: Any abdominal pain? Patient: Yes, in the right upper side.",
+    "patient_info": {
+      "temperature": 38.1,
+      "heart_rate": 94,
+      "blood_pressure": "118/74",
+      "oxygen_saturation": 97
+    },
+    "doctor_opinion": "Suggestive of acute hepatitis; check LFTs and viral markers.",
+    "abha_id": "ABHA-45-6666-2121",
+    "image": null
+  },
+  {
+    "conversation": "Patient: I have night sweats and weight loss. Doctor: Any cough? Patient: Yes, dry cough for 1 month.",
+    "patient_info": {
+      "temperature": 37.8,
+      "heart_rate": 90,
+      "blood_pressure": "116/72",
+      "oxygen_saturation": 96
+    },
+    "doctor_opinion": "Suspicious for pulmonary tuberculosis; order chest X-ray and sputum AFB.",
+    "abha_id": "ABHA-89-2222-3344",
+    "image": null
+  },
+  {
+    "conversation": "Patient: My child has itchy red patches on the skin. Doctor: Since when? Patient: For 2 weeks, worse after dust exposure.",
+    "patient_info": {
+      "temperature": 37.0,
+      "heart_rate": 88,
+      "blood_pressure": "112/70",
+      "oxygen_saturation": 99
+    },
+    "doctor_opinion": "Atopic dermatitis suspected; advise antihistamines and topical steroids.",
+    "abha_id": "ABHA-90-4455-7766",
+    "image": null
+  },
+  {
+    "conversation": "Patient: I’ve been having severe lower back pain radiating down the leg. Doctor: Does it worsen with movement? Patient: Yes, especially when bending.",
+    "patient_info": {
+      "temperature": 36.9,
+      "heart_rate": 80,
+      "blood_pressure": "122/78",
+      "oxygen_saturation": 99
+    },
+    "doctor_opinion": "Likely lumbar disc herniation causing sciatica; MRI recommended.",
+    "abha_id": "ABHA-65-1212-9090",
+    "image": null
+  },
+  {
+    "conversation": "Patient: I feel extremely tired and pale. Doctor: Any bleeding or heavy periods? Patient: Yes, very heavy cycles.",
+    "patient_info": {
+      "temperature": 36.7,
+      "heart_rate": 104,
+      "blood_pressure": "110/68",
+      "oxygen_saturation": 98
+    },
+    "doctor_opinion": "Iron-deficiency anemia; check CBC, ferritin, and start supplementation.",
+    "abha_id": "ABHA-77-3344-8899",
+    "image": null
+  },
+  {
+    "conversation": "Patient: I’ve been having episodes of sweating, tremors, and confusion. Doctor: Do these improve after eating? Patient: Yes, quickly.",
+    "patient_info": {
+      "temperature": 36.6,
+      "heart_rate": 88,
+      "blood_pressure": "118/76",
+      "oxygen_saturation": 98
+    },
+    "doctor_opinion": "Likely hypoglycemia; investigate insulinoma or medication-induced cause.",
+    "abha_id": "ABHA-22-7788-1001",
+    "image": null
+  }
+]
+
