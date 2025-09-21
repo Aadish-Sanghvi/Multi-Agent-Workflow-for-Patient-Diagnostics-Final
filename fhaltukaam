@@ -218,3 +218,12 @@ curl --location 'http://127.0.0.1:8000/scrape_and_filter' \
 
 
 2piXepPMxbVjSHQrsIus4dpz0xk_4GkYTeYBwCRALnNWmS7JZ
+
+
+
+
+vector_db_path="./vector_db_storage"
+    vdb = SimpleVectorDB(storage_path=vector_db_path)
+    filtering_prompt = "what is chronic cough? what are the symptoms of this? how to cure it"
+    results = vdb.search(filtering_prompt, top_k=10, expand_context=True)
+    print(results)
