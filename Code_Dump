@@ -1,1 +1,177 @@
-use this 
+import numpy as np
+import pandas as pd
+import torch
+import torch.nn as nn
+import torch.optim as optim
+from torch.utils.data import TensorDataset, DataLoader
+import optuna
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+from sklearn.ensemble import IsolationForest
+import time
+
+# ============================
+# Device Setup (MPS)
+# ============================
+device = torch.device("mps") if torch.backends.mps.is_available() else torch.device("cpu")
+print(f"[INFO] Using device: {device}")
+
+# ============================
+# SMAPE Metric
+# ============================
+def smape(y_true, y_pred):
+    denominator = (np.abs(y_true) + np.abs(y_pred)) / 2.0
+    diff = np.abs(y_true - y_pred)
+    return np.mean(np.where(denominator == 0, 0, diff / denominator)) * 100
+
+# ============================
+# Activation Function Mapper
+# ============================
+def get_activation(name):
+    return {
+        'relu': nn.ReLU(),
+        'leaky_relu': nn.LeakyReLU(),
+        'elu': nn.ELU(),
+        'tanh': nn.Tanh()
+    }.get(name, nn.ReLU())
+
+# ============================
+# Flexible MLP Model
+# ============================
+class MLPRegressor(nn.Module):
+    def __init__(self, input_dim, hidden_dim, num_layers, dropout, activation):
+        super().__init__()
+        layers = []
+        for i in range(num_layers):
+            layers.append(nn.Linear(input_dim if i == 0 else hidden_dim, hidden_dim))
+            layers.append(get_activation(activation))
+            if dropout > 0:
+                layers.append(nn.Dropout(dropout))
+        layers.append(nn.Linear(hidden_dim, 1))
+        self.model = nn.Sequential(*layers)
+
+    def forward(self, x):
+        return self.model(x)
+
+# ============================
+# Load Dataset
+# ============================
+df = pd.read_csv('/Users/abhinavgupta/Desktop/ml/final_training_data.csv')  # Update path
+X = df.iloc[:, :-1].values.astype(np.float32)
+y = df.iloc[:, -1].values.astype(np.float32)
+
+# ============================
+# 1. Target Transformation (Log-Price)
+# ============================
+# Use log(1 + price) to stabilize variance and reduce skew
+y = np.log1p(y)
+
+# ============================
+# 2. Feature Engineering on Embeddings
+# ============================
+
+# Standard Scaling
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
+# PCA (optional, helps reduce noise & collinearity in embeddings)
+pca = PCA(n_components=0.95, random_state=42)  # keep 95% variance
+X_pca = pca.fit_transform(X_scaled)
+print(f"[INFO] PCA reduced {X.shape[1]} -> {X_pca.shape[1]} features")
+
+# Simple Statistical Features on Embeddings
+# These give the model more aggregated info (can help MLP converge faster)
+mean_feat = X_scaled.mean(axis=1).reshape(-1, 1)
+std_feat = X_scaled.std(axis=1).reshape(-1, 1)
+max_feat = X_scaled.max(axis=1).reshape(-1, 1)
+min_feat = X_scaled.min(axis=1).reshape(-1, 1)
+sum_feat = X_scaled.sum(axis=1).reshape(-1, 1)
+
+X_engineered = np.hstack([X_pca, mean_feat, std_feat, max_feat, min_feat, sum_feat])
+
+# ============================
+# 3. Outlier Detection & Preprocessing
+# ============================
+iso = IsolationForest(contamination=0.01, random_state=42)
+outlier_flags = iso.fit_predict(X_engineered)
+mask = outlier_flags == 1  # keep non-outliers
+
+X_final = X_engineered[mask]
+y_final = y[mask]
+print(f"[INFO] Removed {np.sum(~mask)} outliers, kept {X_final.shape[0]} samples")
+
+# ============================
+# Train-Test Split
+# ============================
+X_train, X_valid, y_train, y_valid = train_test_split(
+    X_final, y_final, test_size=0.2, random_state=42
+)
+
+# Convert to float32
+X_train = X_train.astype(np.float32)
+X_valid = X_valid.astype(np.float32)
+y_train = y_train.astype(np.float32)
+y_valid = y_valid.astype(np.float32)
+
+# ============================
+# Optuna Objective Function
+# ============================
+def objective(trial):
+    hidden_dim = trial.suggest_int('hidden_dim', 64, 1024)
+    num_layers = trial.suggest_int('num_layers', 1, 5)
+    dropout = trial.suggest_float('dropout', 0.0, 0.6)
+    lr = trial.suggest_float('lr', 1e-5, 1e-2, log=True)
+    batch_size = trial.suggest_categorical('batch_size', [32, 64, 128, 256])
+    activation = trial.suggest_categorical('activation', ['relu', 'leaky_relu', 'elu', 'tanh'])
+    optimizer_name = trial.suggest_categorical('optimizer', ['Adam', 'SGD', 'RMSprop'])
+    weight_decay = trial.suggest_float('weight_decay', 1e-8, 1e-3, log=True)
+    epochs = trial.suggest_int('epochs', 10, 40)
+
+    model = MLPRegressor(X_train.shape[1], hidden_dim, num_layers, dropout, activation).to(device)
+    criterion = nn.MSELoss()
+    optimizer = {
+        'Adam': optim.Adam(model.parameters(), lr=lr, weight_decay=weight_decay),
+        'SGD': optim.SGD(model.parameters(), lr=lr, weight_decay=weight_decay),
+        'RMSprop': optim.RMSprop(model.parameters(), lr=lr, weight_decay=weight_decay)
+    }[optimizer_name]
+
+    train_dataset = TensorDataset(torch.from_numpy(X_train), torch.from_numpy(y_train).unsqueeze(1))
+    valid_dataset = TensorDataset(torch.from_numpy(X_valid), torch.from_numpy(y_valid).unsqueeze(1))
+    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
+    valid_loader = DataLoader(valid_dataset, batch_size=batch_size, shuffle=False)
+
+    for epoch in range(epochs):
+        model.train()
+        for xb, yb in train_loader:
+            xb, yb = xb.to(device), yb.to(device)
+            optimizer.zero_grad()
+            loss = criterion(model(xb), yb)
+            loss.backward()
+            optimizer.step()
+
+    model.eval()
+    preds, targets = [], []
+    with torch.no_grad():
+        for xb, yb in valid_loader:
+            xb = xb.to(device)
+            pred = model(xb).cpu().numpy().flatten()
+            preds.append(pred)
+            targets.append(yb.numpy().flatten())
+    preds = np.concatenate(preds)
+    targets = np.concatenate(targets)
+
+    # Inverse transform log(1+p) -> price
+    preds = np.expm1(preds)
+    targets = np.expm1(targets)
+    return smape(targets, preds)
+
+# ============================
+# Run Optuna
+# ============================
+study = optuna.create_study(direction='minimize')
+study.optimize(objective, n_trials=30, show_progress_bar=True)
+
+print("Best trial:", study.best_trial.number)
+print("Best SMAPE:", study.best_trial.value)
+print("Best params:", study.best_trial.params)
